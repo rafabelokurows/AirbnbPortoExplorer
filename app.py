@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 df = pd.read_csv("http://data.insideairbnb.com/portugal/norte/porto/2021-12-08/visualisations/listings.csv")
 df = df[df['neighbourhood_group']=='PORTO']
 st.set_page_config(page_title="Analysis of Airbnb listings in Porto", layout = 'wide', initial_sidebar_state = 'auto')

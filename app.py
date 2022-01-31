@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-#import plotly.express as px
+import plotly.express as px
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, ImageColorGenerator
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -60,11 +60,11 @@ right_col.subheader("Another map")
 with right_col:
     folium_static(map_folium)
 
-#fig = px.histogram(df.price, x="price", nbins=25, title="Price distribution")
-#fig.update_xaxes(title="Price")
-#fig.update_yaxes(title="No. of listings")
+fig = px.histogram(df.price, x="price", nbins=25, title="Price distribution")
+fig.update_xaxes(title="Price")
+fig.update_yaxes(title="No. of listings")
 # Plot!
-#left_col.plotly_chart(fig, use_container_width=True)
+left_col.plotly_chart(fig, use_container_width=True)
 
 #st.markdown("The first five records of the Airbnb data we downloaded.")
 #st.dataframe(df.head())
